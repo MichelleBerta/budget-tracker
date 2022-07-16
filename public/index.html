@@ -14,36 +14,142 @@
   <!-- manifest -->
   <link rel="manifest" href="manifest.webmanifest">
 
-  <title>Budget Tracker</title>
+  <title>Hand and Foot</title>
 </head>
 
 <body>
   <div class="wrapper">
     <div class="total">
-      <div class="total">Your total is: $<span id="total">0</span></div>
+      <div class="total">Your score is: <span id="totalScore">0</span></div>
+    
+      
+  
     </div>
 
-    <div class="form">
+
+    <!-- <div class="form">
       <input type="text" id="t-name" placeholder="Name of transaction" />
       <input type="number" min="0" id="t-amount" placeholder="Transaction amount" />
       <button id="add-btn"><i class="fa fa-plus buttons"></i> Add Funds</button>
       <button id="sub-btn"><i class="fa fa-minus"></i> Subtract Funds</button>
       <p class="error"></p>
-    </div>
-
+    </div> -->
+    
+    <!--SCORE FORM-->
     <div class="transactions">
       <table>
         <thead>
-          <th>Transaction</th>
-          <th>Amount</th>
+          <th>Cards and Melds in Hand</th>
+          <th>Number</th>
+          <th>Submit</th>
+          <th>Score</th>
         </thead>
         <tbody id="tbody">
+          <tr>
+            <td>Going Out Bonus</td>
+            <td id="out"><input type="radio">Yes <input type="radio">No</td>
+            <td id="outScore"></td>
+            <!-- <td><input type="button" onClick="multiplyBy()" Value="Multiply" /></td>
+            <td><span id = "result"></span> </td> -->
+          </tr>
+
+          <tr>
+            <td>Red 3s</td>
+            <td>
+              <input type="number" name="qty" id="red3Number" placeholder="100 points each"/>
+            </td>
+          
+            <td><input type="button" onClick="red3MultiplyBy()" Value="Submit" /></td>
+            <td><span id = "red3Score"></span> </td>
+          </tr>
+
+          <tr>
+            <td>Wild Melds</td>
+            <td>
+              <input type="number" name="qty" id="wildNumber" placeholder="1500 points each"/>
+            </td>
+          
+            <td><input type="button" onClick="wildMultiplyBy()" Value="Submit" /></td>
+            <td><span id = "wildScore"></span> </td>
+          </tr>
+
+          <tr>
+            <td>Clean Melds</td>
+            <td>
+              <input type="number" name="qty" id="cleanNumber" placeholder="500 points each"/>
+            </td>
+          
+            <td><input type="button" onClick="cleanMultiplyBy()" Value="Submit" /></td>
+            <td><span id = "cleanScore"></span> </td>
+          </tr>
+
+          <tr>
+            <td>Dirty Melds</td>
+            <td>
+              <input type="number" name="qty" id="dirtyNumber" placeholder="300 points each"/>
+            </td>
+          
+            <td><input type="button" onClick="dirtyMultiplyBy()" Value="Submit" /></td>
+            <td><span id = "dirtyScore"></span> </td>
+          </tr>
+
+          <tr>
+            <td>Jokers</td>
+            <td>
+              <input type="number" name="qty" id="jokersNumber" placeholder="50 points each"/>
+            </td>
+          
+            <td><input type="button" onClick="jokersMultiplyBy()" Value="Submit" /></td>
+            <td><span id = "jokersScore"></span> </td>
+          </tr>
+
+          <tr>
+            <td>Twos and Aces</td>
+            <td>
+              <input type="number" name="qty" id="acesNumber" placeholder="20 points each"/>
+            </td>
+          
+            <td><input type="button" onClick="acesMultiplyBy()" Value="Submit" /></td>
+            <td><span id = "acesScore"></span> </td>
+          </tr>
+
+          <tr>
+            <td>Eights - Kings</td>
+            <td>
+              <input type="number" name="qty" id="kingNumber" placeholder="10 points each"/>
+            </td>
+          
+            <td><input type="button" onClick="kingMultiplyBy()" Value="Submit" /></td>
+            <td><span id = "kingScore"></span> </td>
+          </tr>
+
+          <tr>
+            <td>Fours - Sevens</td>
+            <td>
+              <input type="number" name="qty" id="sevenNumber" placeholder="5 points each"/>
+            </td>
+          
+            <td><input type="button" onClick="sevenMultiplyBy()" Value="Submit" /></td>
+            <td><span id = "sevenScore"></span> </td>
+          </tr>
+
+          <tr>
+            <td>Cards in Hand</td>
+            <td>
+              <input type="number" name="qty" id="subtractNumber" placeholder="Subtract Total"/>
+            </td>
+          
+            <td><input type="button" onClick="subtractBy()" Value="Submit" /></td>
+            <td><span id = "subtractScore"></span> </td>
+          </tr>
+
 
         </tbody>
       </table>
+      <input type="button" onClick="addAll()" Value="Submit" />
     </div>
 
-    <canvas id="myChart"></canvas>
+    <!-- <canvas id="myChart"></canvas> -->
   </div>
 
   <!-- service worker -->
